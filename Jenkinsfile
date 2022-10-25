@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage('Docker build') {
             steps{
-                sh 'docker build -t demo-0.0.1 .'
+                sh 'docker build -t vildanasuta/demo-jenkins:demo-0.0.1 .'
                 
             }
         }
@@ -19,7 +19,7 @@ pipeline{
         }
         stage('push image'){
             steps{
-                sh 'docker push demo-0.0.1'
+                sh 'docker push vildanasuta/demo-jenkins:demo-0.0.1'
             }
         }
         
